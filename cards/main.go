@@ -7,6 +7,7 @@ func main() {
 	card = newCard()
 
 	fmt.Println(card)
+	printState()
 }
 
 func newCard() string {
