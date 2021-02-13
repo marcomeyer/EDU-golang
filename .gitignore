@@ -1,1 +1,5 @@
 .DS_Store
+cards/.metals/metals.h2.db
+cards/.metals/metals.lock.db
+cards/.metals/metals.log
+cards/.vscode/settings.json
