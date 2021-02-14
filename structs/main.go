@@ -23,6 +23,10 @@ func main() {
 		},
 	}
 
+	// jimPointer := &jim
+	// jimPointer.updateName("jimmy")
+
+	// Go can interpret jim as *person 
 	jim.updateName("jimmy")
 	jim = updateNameByValue(jim, "jay")
 	
