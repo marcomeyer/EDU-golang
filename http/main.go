@@ -19,10 +19,24 @@ func main() {
 	lw := logWriter{}
 
 	io.Copy(lw, resp.Body)
+
+	// alternativeRead(resp.Body)
+
+	// copy to stdout
+	// io.Copy(os.Stdout, resp.Body)
+
 }
 
 func (logWriter) Write(bs []byte) (int, error) {
 	fmt.Println(string(bs))
 	fmt.Println("Just wrote this many bytes:", len(bs))
 	return len(bs), nil
+}
+
+func alternativeRead(body io.ReadCloser) {
+	bs:= make([]byte, 99999)
+
+	body.Read(bs)
+
+	fmt.Println(string(bs))
 }
