@@ -20,9 +20,14 @@ func main() {
 		go checkLink(link, c)
 	}
 
-	for l := range c {
-		fmt.Println(l)
+	// for l := range c {
+	// 	fmt.Println(l)
+	// }
+
+	for {
+		go checkLink(<-c, c)
 	}
+
 	// for l := range c {
 	// 	go func(link string) {
 	// 		time.Sleep(30 * time.Second)
