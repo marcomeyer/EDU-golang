@@ -24,6 +24,7 @@ func main() {
 	}
 
 	jim.updateName("jimmy")
+	jim = updateNameByValue(jim, "jay")
 	
 	fmt.Println(jim)
 	jim.print()
@@ -31,6 +32,11 @@ func main() {
 
 func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
+}
+
+func updateNameByValue(p person, newFirstName string) person {
+	p.firstName = newFirstName
+	return p
 }
 
 func (p person) print() {
