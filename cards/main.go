@@ -7,6 +7,8 @@ func main() {
 
 	cards.saveToFile("my-cards")
 	cards = newDeckFromFile("my-cards")
+
+	cards.shuffle()
 	
 	fmt.Println(cards.toString())
 }
